@@ -1,7 +1,7 @@
-path: datasets/Face detection.v1-fddb.yolov8  # 数据集的根目录
-train: ./train/images
-val: ./valid/images
-test: ./test/images
+path: /Users/hopen/Desktop/Final/YOLOv8ForSensitiveInformation/datasets/Face detection.v1-fddb.yolov8 # 数据集的根目录
+train: ./train/images/
+val: ./valid/images/
+test: ./test/images/
 
 nc: 1
 names: ['face']
