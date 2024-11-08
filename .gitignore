@@ -1,3 +1,6 @@
 .idea
 test/test.ipynb
 model/yolov8l-face.pt
+datasets/original_widerface
+datasets/YOLO_format_widerface
+.DS_Store
