@@ -1,2 +1,3 @@
 .idea
-test.ipynb
+test/test.ipynb
+model/yolov8l-face.pt
