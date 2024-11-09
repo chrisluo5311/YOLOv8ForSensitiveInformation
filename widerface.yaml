@@ -1,8 +1,0 @@
-train: ./datasets/original_widerface/train  # train images (relative to 'path') 118287 images
-val: ./datasets/original_widerface/val  # val images (relative to 'path') 5000 images
-
-# number of classes
-nc: 0
-# Classes
-names:
-  0: face

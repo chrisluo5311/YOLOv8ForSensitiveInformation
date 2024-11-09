@@ -29,17 +29,17 @@ def convert_widerface_to_yolo(widerface_label_path, image_dir, output_dir):
             i += 1
             num_faces = int(lines[i].strip())
 
-            # If num_faces is 0, skip this image
+            # If num_faces is 0, skip this images
             if num_faces == 0:
-                i += 2  # Move to the next image entry
+                i += 2  # Move to the next images entry
                 continue
 
             # Skip file if label file already exists
-            if os.path.exists(label_file_path):
-                i += num_faces+1  # Skip the current faces data
-                continue
+            # if os.path.exists(label_file_path):
+            #     i += num_faces+1
+            #     continue
 
-            # Open image to get dimensions
+            # Open images to get dimensions
             with Image.open(image_path) as img:
                 image_width, image_height = img.size
 
@@ -56,19 +56,19 @@ def convert_widerface_to_yolo(widerface_label_path, image_dir, output_dir):
                     norm_height = height / image_height
 
                     # Write in YOLO format with class_id as 0 for face
-                    label_file.write(f"0 {x_center:.6f} {y_center:.6f} {norm_width:.6f} {norm_height:.6f}\n")
+                    label_file.write(f"0 {x_center:.8f} {y_center:.8f} {norm_width:.8f} {norm_height:.8f}\n")
         i += 1
 
 if __name__ == "__main__":
     # train
     WIDERFACE_train_label_path = "../datasets/original_widerface/train_label/wider_face_train_bbx_gt.txt"
-    image_train_dir = "../datasets/original_widerface/train"
-    output_train_dir = "../datasets/YOLO_format_widerface/train_label"
+    image_train_dir = "../datasets/YOLO_format_widerface/train/images"
+    output_train_dir = "../datasets/YOLO_format_widerface/train/labels"
 
     # val
     WIDERFACE_val_label_path = "../datasets/original_widerface/val_label/wider_face_val_bbx_gt.txt"
-    image_val_dir = "../datasets/original_widerface/val"
-    output_val_dir = "../datasets/YOLO_format_widerface/val_label"
+    image_val_dir = "../datasets/YOLO_format_widerface/val/images"
+    output_val_dir = "../datasets/YOLO_format_widerface/val/labels"
 
     # convert widerface format to yolo format
     convert_widerface_to_yolo(WIDERFACE_val_label_path, image_val_dir, output_val_dir)
