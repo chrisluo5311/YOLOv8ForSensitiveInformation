@@ -1,0 +1,9 @@
+path: /Users/luojidong/程式/YOLOv8ForSensitiveInformation/datasets/YOLO_format_widerface
+train: train/images
+val: val/images
+test: test/images
+
+# number of classes
+nc: 1
+# Classes
+names: ['face']
