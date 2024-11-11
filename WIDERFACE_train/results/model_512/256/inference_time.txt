@@ -1,0 +1,7 @@
+cnf = 0.5
+1.  7.7ms inference
+2.  9.5ms inference
+3.  9.1ms inference
+4.  11.2ms inference
+5.  10.8ms inference
+6.  8.6ms inference
