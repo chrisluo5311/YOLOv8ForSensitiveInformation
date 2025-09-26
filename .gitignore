@@ -8,3 +8,4 @@ datasets/.DS_Store
 # Ignore models
 WIDERFACE_train/runs
 WIDERFACE_train/best_model
+test.mp4
