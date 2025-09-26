@@ -2,7 +2,9 @@
 model/yolov8l-face.pt
 datasets/original_widerface
 datasets/YOLO_format_widerface
+# Ignore Mac system files
 datasets/.DS_Store
 .DS_Store
+# Ignore models
 WIDERFACE_train/runs
 WIDERFACE_train/best_model
