@@ -2,5 +2,7 @@
 model/yolov8l-face.pt
 datasets/original_widerface
 datasets/YOLO_format_widerface
+datasets/.DS_Store
 .DS_Store
 WIDERFACE_train/runs
+WIDERFACE_train/best_model
